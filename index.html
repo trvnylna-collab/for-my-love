@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For Baby 💙</title>
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,Helvetica,sans-serif;
+}
+
+body{
+background:linear-gradient(180deg,#07142b,#0d274d,#163b73);
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+color:white;
+overflow:hidden;
+transition:.6s;
+}
+
+.card{
+width:90%;
+max-width:420px;
+background:rgba(255,255,255,.08);
+backdrop-filter:blur(12px);
+padding:35px;
+border-radius:20px;
+text-align:center;
+box-shadow:0 0 25px rgba(0,0,0,.4);
+animation:fade .8s;
+}
+
+h1{
+margin-bottom:20px;
+font-size:30px;
+}
+
+p{
+font-size:18px;
+line-height:1.7;
+margin-bottom:25px;
+}
+
+button{
+background:white;
+color:#12396d;
+border:none;
+padding:14px 35px;
+font-size:18px;
+border-radius:40px;
+cursor:pointer;
+transition:.3s;
+}
+
+button:hover{
+transform:scale(1.05);
+}
+
+@keyframes fade{
+from{
+opacity:0;
+transform:translateY(20px);
+}
+to{
+opacity:1;
+transform:translateY(0);
+}
+}
+</style>
+</head>
+
+<body>
+
+<div class="card">
+
+<h1 id="title">Hi, Baby 💙</h1>
+
+<p id="text">
+I made this little website just for you.
+</p>
+
+<button onclick="nextPage()">
+Next →
+</button>
+
+</div>
+
+<script>
+
+const pages=[
+
+{
+title:"Hi, Baby 💙",
+text:"I made this little website just for you."
+},
+
+{
+title:"I'm Sorry",
+text:"I'm sorry for falling asleep before saying goodnight. I know you waited for me even though you were already sleepy."
+},
+
+{
+title:"Please Believe Me",
+text:"I never wanted you to feel ignored. I didn't fall asleep because I didn't care... my body simply gave up before my heart did."
+},
+
+{
+title:"Thank You",
+text:"Thank you for always waiting for me. Thank you for loving me. Thank you for choosing me every single day."
+},
+
+{
+title:"If I Could",
+text:"If I could replay last night... I'd stay awake just a little longer just to tell you... Goodnight, Baby. I love you."
+},
+
+{
+title:"One Last Thing 🥺",
+text:"Can you forgive me? 💙"
+},
+
+{
+title:"I Love You ❤️",
+text:"No matter what happens, you'll always be my favourite person. Thank you for reading until the end. I love you so much, Baby."
+}
+
+];
+
+let current=0;
+
+function nextPage(){
+
+current++;
+
+if(current>=pages.length){
+current=0;
+}
+
+document.getElementById("title").innerHTML=pages[current].title;
+
+document.getElementById("text").innerHTML=pages[current].text;
+
+}
+
+</script>
+
+</body>
+</html>
